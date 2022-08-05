@@ -2,19 +2,22 @@ var axios = require('axios');
 var data = JSON.stringify({
     "collection": "Products",
     "database": "FakeStore",
-    "dataSource": "ADSI2364482",
-    "projection": {
-
+    "dataSource": "ClusterADSI2364482",
+    "filter": { "_id": 222 },
+    "update": {
+        "$set": {
+            "title": "Aguacate"
+        }
     }
 });
-        
+            
 var config = {
     method: 'post',
-    url: 'https://data.mongodb-api.com/app/data-pfnpp/endpoint/data/v1/action/find',
+    url: 'https://data.mongodb-api.com/app/data-wnqgp/endpoint/data/v1/action/updateOne',
     headers: {
       'Content-Type': 'application/json',
       'Access-Control-Request-Headers': '*',
-      'api-key': 'LzNyAh9PS3ATY13qhV5Os0GDj3mOqdxapiqOV139VUODdmtpVtBZo2gzWyAZa2Ik',
+      'api-key': 'czSYdrVNcYMJIRnZAJlDKpyxBevka1pf4e0eVF9Zp3j6cgMKMCWFhP2DZK2PqlYe',
     },
     data: data
 };

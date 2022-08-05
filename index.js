@@ -1,3 +1,9 @@
-var servidor = require('./server');
+const express = require('express');
+const app = express();
 
-servidor.iniciar();
+app.get("/", function(req,res){
+    res.send("HOla")
+    res.end();
+})
+
+app.listen(7577)  
